@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal"
+        android:paddingLeft="24dp" android:paddingRight="24dp"
+        android:paddingTop="36dp" android:paddingBottom="28dp">
+
+        <ImageView
+            android:id="@+id/logo" android:layout_width="96dp" android:layout_height="96dp"
+            android:background="@drawable/bg_logo" android:elevation="10dp"
+            android:outlineProvider="background" android:src="@drawable/logo_round"
+            android:contentDescription="UglyPay" />
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="UglyPay SMS"
+            android:textColor="@color/ink" android:textSize="24sp" android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="পেমেন্ট SMS অটো ভেরিফাই"
+            android:textColor="@color/ink_soft" android:textSize="13sp" />
+
+        <!-- ================= login ================= -->
+        <LinearLayout
+            android:id="@+id/loginCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="32dp" android:orientation="vertical"
+            android:background="@drawable/bg_card" android:elevation="8dp" android:padding="22dp">
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="লগইন" android:textColor="@color/ink" android:textSize="18sp" android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:text="Mini App থেকে SMS Key কপি করে বসান"
+                android:textColor="@color/ink_soft" android:textSize="12.5sp" />
+
+            <EditText
+                android:id="@+id/token"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="18dp" android:background="@drawable/bg_input"
+                android:hint="sms_••••••••" android:inputType="textPassword"
+                android:maxLines="1" android:paddingLeft="16dp" android:paddingRight="16dp"
+                android:textColor="@color/ink" android:textColorHint="#A9B1CC" android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/loginBtn"
+                android:layout_width="match_parent" android:layout_height="54dp"
+                android:layout_marginTop="16dp" android:background="@drawable/bg_btn_primary"
+                android:stateListAnimator="@null" android:text="লগইন" android:textAllCaps="false"
+                android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:textColor="@color/bad" android:textSize="12.5sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- ================= dashboard ================= -->
+        <LinearLayout
+            android:id="@+id/dashCard"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="32dp" android:orientation="vertical"
+            android:background="@drawable/bg_card" android:elevation="8dp" android:padding="22dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <View
+                    android:id="@+id/dot" android:layout_width="12dp" android:layout_height="12dp"
+                    android:background="@drawable/bg_dot" />
+                <TextView
+                    android:id="@+id/statusTitle"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" android:textColor="@color/ink"
+                    android:textSize="20sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/statusSub"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:lineSpacingExtra="3dp"
+                android:textColor="@color/ink_soft" android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/mainBtn"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="20dp" android:background="@drawable/bg_btn_primary"
+                android:stateListAnimator="@null" android:textAllCaps="false"
+                android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/chipSms"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:background="@drawable/bg_chip" android:gravity="center"
+                    android:paddingTop="9dp" android:paddingBottom="9dp"
+                    android:textSize="12sp" android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/chipNotif"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginLeft="10dp" android:background="@drawable/bg_chip" android:gravity="center"
+                    android:paddingTop="9dp" android:paddingBottom="9dp"
+                    android:textSize="12sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:padding="10dp" android:text="লগআউট"
+            android:textColor="@color/ink_soft" android:textSize="13sp" android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

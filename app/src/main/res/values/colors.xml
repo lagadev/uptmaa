@@ -1,0 +1,18 @@
+<resources>
+    <color name="bg_top">#F3F6FF</color>
+    <color name="bg_mid">#EEF1FB</color>
+    <color name="bg_bottom">#FFEDE3</color>
+    <color name="ink">#1B2140</color>
+    <color name="ink_soft">#7B84A3</color>
+    <color name="brand">#3F6BFF</color>
+    <color name="brand_light">#5B8DFF</color>
+    <color name="brand_deep">#2F54EB</color>
+    <color name="good">#16A36A</color>
+    <color name="good_soft">#E4F6EC</color>
+    <color name="warn">#F59E0B</color>
+    <color name="bad">#E5484D</color>
+    <color name="bad_soft">#FDECEC</color>
+    <color name="idle">#A3AAC4</color>
+    <color name="chip">#F1F4FB</color>
+    <color name="ic_launcher_background">#FEA075</color>
+</resources>
